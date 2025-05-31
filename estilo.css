@@ -1,0 +1,76 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40;
+    padding: 10px 20px;
+}
+
+.navbar .brand {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links ul li {
+    margin-left: 20px;
+}
+
+.navbar-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Estilos del botón hamburguesa */
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+}
